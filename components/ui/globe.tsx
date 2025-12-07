@@ -205,12 +205,12 @@ export function World() {
               // Create new label
               const labelDiv = document.createElement('div')
               labelDiv.style.position = 'absolute'
-              labelDiv.style.color = '#ff5722'
+              labelDiv.style.color = '#C71585'
               labelDiv.style.fontSize = '16px'
               labelDiv.style.fontWeight = '600'
               labelDiv.style.pointerEvents = 'none'
               labelDiv.style.whiteSpace = 'nowrap'
-              labelDiv.style.textShadow = '0 0 10px rgba(255, 87, 34, 0.5)'
+              labelDiv.style.textShadow = '0 0 10px rgba(199, 21, 133, 0.5)'
               labelsRef.current!.appendChild(labelDiv)
               activeLabels.set(pin.label, { element: labelDiv, startTime: time })
             }
@@ -304,16 +304,29 @@ export function World() {
           text-shadow: 0 0 20px rgba(0, 217, 255, 0.8);
           letter-spacing: 1px;
         }
+
+        @keyframes scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(calc(-100% / 2));
+          }
+        }
+
+        .logo-carousel {
+          display: inline-flex;
+          animation: scroll 15s linear infinite;
+          will-change: transform;
+        }
+
+        .logo-carousel:hover {
+          animation-play-state: paused;
+        }
       `}</style>
 
       <div ref={containerRef} className="w-full h-full" />
       <div ref={labelsRef} className="absolute inset-0 pointer-events-none" />
-
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-        <div className="typewriter-text">
-          We build for startups around the world
-        </div>
-      </div>
     </div>
   )
 }

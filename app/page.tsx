@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Home() {
@@ -171,22 +170,9 @@ export default function Home() {
         </>
       )}
 
-      {/* Logo and Navigation */}
+      {/* Navigation */}
       <div className="fixed top-0 left-0 right-0 z-50">
-        <div className="max-w-7xl mx-auto px-8 py-8 flex items-center justify-between">
-          {/* Logo */}
-          <div>
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              width={1200}
-              height={360}
-              className="w-auto h-40"
-              priority
-            />
-          </div>
-
-          {/* Navigation */}
+        <div className="max-w-7xl mx-auto px-8 py-8 flex items-center justify-end">
           <nav className="flex items-center gap-8">
             <a href="/discover" className="text-white hover:text-gray-300 transition text-base">Services</a>
             <a href="/portfolio" className="text-white hover:text-gray-300 transition text-base">Portfolio</a>
