@@ -241,7 +241,7 @@ export default function Competitions() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-orange-500 mt-1 flex-shrink-0">•</span>
-                <span><span className="highlight-text highlight-delay-4">Funding-scouting support</span> for US based investors</span>
+                <span><span className="highlight-text highlight-delay-4">Direct referral and access</span> to US-based investors</span>
               </li>
             </ul>
 
