@@ -317,6 +317,9 @@ export default function Discover() {
             <Link href="/our-cause" className="text-gray-300 hover:text-gray-100 transition hidden sm:inline text-xs sm:text-sm md:text-base">
               Our Cause
             </Link>
+            <Link href="/competitions" className="text-gray-300 hover:text-gray-100 transition text-xs sm:text-sm md:text-base">
+              Competitions
+            </Link>
           </nav>
         </div>
       </div>

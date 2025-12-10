@@ -185,6 +185,7 @@ export default function Home() {
             <a href="/discover" className="text-gray-200 hover:text-gray-100 transition text-sm sm:text-base">Services</a>
             <a href="/portfolio" className="text-gray-200 hover:text-gray-100 transition text-sm sm:text-base">Portfolio</a>
             <a href="/our-cause" className="text-gray-200 hover:text-gray-100 transition text-sm sm:text-base">Our Cause</a>
+            <a href="/competitions" className="text-gray-200 hover:text-gray-100 transition text-sm sm:text-base">Competitions</a>
           </nav>
         </div>
       </div>

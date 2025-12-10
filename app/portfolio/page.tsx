@@ -36,6 +36,9 @@ export default function Portfolio() {
             <Link href="/our-cause" className="text-white hover:text-gray-300 transition hidden sm:inline text-xs sm:text-sm md:text-base">
               Our Cause
             </Link>
+            <Link href="/competitions" className="text-white hover:text-gray-300 transition text-xs sm:text-sm md:text-base">
+              Competitions
+            </Link>
           </nav>
         </div>
       </div>

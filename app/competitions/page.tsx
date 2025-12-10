@@ -245,9 +245,12 @@ export default function Competitions() {
               </li>
             </ul>
 
-            <div className="relative inline-flex items-center justify-center w-full group">
+            <div className="relative inline-flex items-center justify-center w-full group" style={{ zIndex: 10 }}>
               <div className="absolute inset-0 duration-1000 opacity-60 transition-all bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-400 rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
-              <button className="group relative inline-flex items-center justify-center text-sm sm:text-base rounded-xl bg-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 font-semibold text-white transition-all duration-200 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30 w-full">
+              <Link
+                href="/competitions/apply"
+                className="group relative inline-flex items-center justify-center text-sm sm:text-base rounded-xl bg-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 font-semibold text-white transition-all duration-200 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30 w-full"
+              >
                 Apply
                 <svg
                   aria-hidden="true"
@@ -266,7 +269,7 @@ export default function Competitions() {
                     className="transition group-hover:translate-x-[3px]"
                   ></path>
                 </svg>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
