@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Footer from '@/components/Footer'
+import DarkNavigation from '@/components/DarkNavigation'
 
 interface Project {
   id: number
@@ -425,33 +426,7 @@ export default function Projects() {
 
       `}</style>
 
-      {/* Custom black header */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 md:py-4">
-          <nav className="flex items-center justify-between">
-            <Link href="/portfolio" className="text-white hover:text-gray-300 transition text-xs sm:text-sm md:text-base">
-              ← Back
-            </Link>
-            <div className="flex items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8">
-              <Link href="/" className="text-white hover:text-gray-300 transition hidden md:inline text-xs sm:text-sm md:text-base">
-                About Us
-              </Link>
-              <Link href="/discover" className="text-white hover:text-gray-300 transition text-xs sm:text-sm md:text-base">
-                Services
-              </Link>
-              <Link href="/portfolio" className="text-white hover:text-gray-300 transition text-xs sm:text-sm md:text-base">
-                Portfolio
-              </Link>
-              <Link href="/our-cause" className="text-white hover:text-gray-300 transition hidden sm:inline text-xs sm:text-sm md:text-base">
-                Our Cause
-              </Link>
-              <Link href="/competitions" className="text-white hover:text-gray-300 transition text-xs sm:text-sm md:text-base">
-                Competitions
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </div>
+      <DarkNavigation />
 
       <div className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8">
         <div className="max-w-6xl mx-auto">

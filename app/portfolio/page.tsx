@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { GlobeDemo } from '@/components/GlobeDemo'
 import Footer from '@/components/Footer'
+import DarkNavigation from '@/components/DarkNavigation'
 
 export default function Portfolio() {
   useEffect(() => {
@@ -20,28 +21,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-black" style={{ backgroundColor: '#000000' }}>
-      {/* Custom black header */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 md:py-4">
-          <nav className="flex items-center justify-end gap-4 sm:gap-6 md:gap-8">
-            <Link href="/" className="text-white hover:text-gray-300 transition text-xs sm:text-sm md:text-base">
-              About Us
-            </Link>
-            <Link href="/discover" className="text-white hover:text-gray-300 transition text-xs sm:text-sm md:text-base">
-              Services
-            </Link>
-            <Link href="/portfolio" className="text-white hover:text-gray-300 transition text-xs sm:text-sm md:text-base">
-              Portfolio
-            </Link>
-            <Link href="/our-cause" className="text-white hover:text-gray-300 transition hidden sm:inline text-xs sm:text-sm md:text-base">
-              Our Cause
-            </Link>
-            <Link href="/competitions" className="text-white hover:text-gray-300 transition text-xs sm:text-sm md:text-base">
-              Competitions
-            </Link>
-          </nav>
-        </div>
-      </div>
+      <DarkNavigation />
 
       <div className="w-full bg-black pt-16 sm:pt-20 md:pt-24 pb-4 sm:pb-6">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 sm:mb-3 text-center px-4">

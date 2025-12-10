@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Footer from '@/components/Footer'
+import DarkNavigation from '@/components/DarkNavigation'
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -178,17 +179,7 @@ export default function Home() {
         </>
       )}
 
-      {/* Navigation */}
-      <div className="fixed top-0 left-0 right-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-4 md:py-8 flex items-center justify-end">
-          <nav className="flex items-center gap-4 sm:gap-6 md:gap-8">
-            <a href="/discover" className="text-gray-200 hover:text-gray-100 transition text-sm sm:text-base">Services</a>
-            <a href="/portfolio" className="text-gray-200 hover:text-gray-100 transition text-sm sm:text-base">Portfolio</a>
-            <a href="/our-cause" className="text-gray-200 hover:text-gray-100 transition text-sm sm:text-base">Our Cause</a>
-            <a href="/competitions" className="text-gray-200 hover:text-gray-100 transition text-sm sm:text-base">Competitions</a>
-          </nav>
-        </div>
-      </div>
+      <DarkNavigation />
 
       {/* Main content */}
       <div className="flex items-center justify-center h-full px-4 sm:px-6 md:px-8">

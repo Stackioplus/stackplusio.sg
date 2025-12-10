@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import DarkNavigation from '@/components/DarkNavigation'
 
 export default function CompetitionApply() {
   const [formData, setFormData] = useState({
@@ -110,28 +111,7 @@ export default function CompetitionApply() {
         }
       `}</style>
 
-      {/* Custom Navigation */}
-      <div className="fixed top-0 left-0 right-0 z-50 shadow-sm" style={{ backgroundColor: '#000000' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-2 md:py-3">
-          <nav className="flex items-center justify-end gap-3 sm:gap-4 md:gap-6 lg:gap-8">
-            <Link href="/" className="text-gray-300 hover:text-gray-100 transition text-xs sm:text-sm md:text-base">
-              About Us
-            </Link>
-            <Link href="/discover" className="text-gray-300 hover:text-gray-100 transition text-xs sm:text-sm md:text-base">
-              Services
-            </Link>
-            <Link href="/portfolio" className="text-gray-300 hover:text-gray-100 transition text-xs sm:text-sm md:text-base">
-              Portfolio
-            </Link>
-            <Link href="/our-cause" className="text-gray-300 hover:text-gray-100 transition text-xs sm:text-sm md:text-base">
-              Our Cause
-            </Link>
-            <Link href="/competitions" className="text-gray-300 hover:text-gray-100 transition text-xs sm:text-sm md:text-base">
-              Competitions
-            </Link>
-          </nav>
-        </div>
-      </div>
+      <DarkNavigation />
 
       {/* Main Content */}
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
