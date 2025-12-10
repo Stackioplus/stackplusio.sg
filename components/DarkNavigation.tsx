@@ -25,44 +25,6 @@ export default function DarkNavigation() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: '#000000' }}>
-      <style jsx>{`
-        .menu-dropdown {
-          list-style: none;
-        }
-
-        .submenu-link {
-          display: block;
-          padding: 12px 24px;
-          width: 100%;
-          position: relative;
-          text-align: center;
-          transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .submenu-link::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          transform: scaleX(0);
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(-45deg, #f89b29, #ff0f7b);
-          z-index: -1;
-          transform-origin: left;
-          transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .submenu-link:hover::before {
-          transform: scaleX(1);
-          transform-origin: right;
-        }
-
-        .submenu-link:hover {
-          color: #ffffff;
-        }
-      `}</style>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-2 md:py-3">
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center justify-end gap-4 md:gap-6 lg:gap-8">
@@ -88,7 +50,7 @@ export default function DarkNavigation() {
           <div className="relative">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="flex items-center gap-2 text-gray-300 hover:text-white px-4 py-3 rounded-2xl border border-gray-700 hover:border-gray-500 transition"
+              className="flex items-center gap-2 text-white px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 transition-all duration-300 shadow-lg"
             >
               <span className="text-sm font-medium">Menu</span>
               <svg
@@ -105,60 +67,54 @@ export default function DarkNavigation() {
             </button>
 
             {/* Dropdown Panel */}
-            <ul
-              className={`menu-dropdown absolute right-0 top-full mt-1 w-48 bg-black rounded-b-2xl border border-gray-700 overflow-hidden transition-all duration-300 ${
+            <div
+              className={`absolute right-0 top-full mt-2 w-44 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 ${
                 isMenuOpen
-                  ? 'opacity-100 visible translate-y-0 border-t-0'
-                  : 'opacity-0 invisible -translate-y-3 pointer-events-none'
+                  ? 'opacity-100 visible translate-y-0'
+                  : 'opacity-0 invisible -translate-y-2 pointer-events-none'
               }`}
-              style={{ borderTop: isMenuOpen ? 'none' : undefined }}
+              style={{
+                background: 'linear-gradient(135deg, rgba(30,30,30,0.98) 0%, rgba(20,20,20,0.98) 100%)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255,255,255,0.1)'
+              }}
             >
-              <li>
-                <Link
-                  href="/"
-                  className="submenu-link text-gray-300 text-sm"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/discover"
-                  className="submenu-link text-gray-300 text-sm"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/portfolio"
-                  className="submenu-link text-gray-300 text-sm"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/our-cause"
-                  className="submenu-link text-gray-300 text-sm"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Our Cause
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/competitions"
-                  className="submenu-link text-gray-300 text-sm"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Competitions
-                </Link>
-              </li>
-            </ul>
+              <Link
+                href="/"
+                className="block px-5 py-3 text-gray-200 text-sm hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-pink-500/20 hover:text-white transition-all duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
+              </Link>
+              <Link
+                href="/discover"
+                className="block px-5 py-3 text-gray-200 text-sm hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-pink-500/20 hover:text-white transition-all duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
+                href="/portfolio"
+                className="block px-5 py-3 text-gray-200 text-sm hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-pink-500/20 hover:text-white transition-all duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Portfolio
+              </Link>
+              <Link
+                href="/our-cause"
+                className="block px-5 py-3 text-gray-200 text-sm hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-pink-500/20 hover:text-white transition-all duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Our Cause
+              </Link>
+              <Link
+                href="/competitions"
+                className="block px-5 py-3 text-gray-200 text-sm hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-pink-500/20 hover:text-white transition-all duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Competitions
+              </Link>
+            </div>
           </div>
         </div>
       </div>
